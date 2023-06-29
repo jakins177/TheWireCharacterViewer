@@ -8,7 +8,6 @@ object RetrofitInstance {
 
     private const val BASE_URL = "https://api.duckduckgo.com"
     private val moshi = Moshi.Builder()
-   //     .add(KotlinJsonAdapterFactory())
         .build()
 
     private val retrofit = Retrofit.Builder()
@@ -16,9 +15,5 @@ object RetrofitInstance {
         .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
         .build()
 
-
-    val characterService: CharacterService by lazy { retrofit.create(CharacterService::class.java)}
-
-
-
+    val characterService: CharacterService by lazy { retrofit.create(CharacterService::class.java) }
 }

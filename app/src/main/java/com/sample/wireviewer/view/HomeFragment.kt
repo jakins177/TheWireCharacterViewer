@@ -20,8 +20,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ) = FragmentHomeBinding.inflate(layoutInflater, container, false).also {
         _binding = it
-      //  setupObservers()
-
 
         binding.lookUpButton.setOnClickListener {
             Log.i(TAG, "onCreateView: lookupbutton clicked")
@@ -32,11 +30,9 @@ class HomeFragment : Fragment() {
 
         }
 
-
     }.root
 
-
-    }
+}
 
 
 

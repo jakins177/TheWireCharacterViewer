@@ -43,10 +43,7 @@ class CharacterListFragment : Fragment() {
     ) = FragmentCharacterListBinding.inflate(layoutInflater, container, false).also {
         _binding = it
 
-//        cAdapter = CharacterAdapter(mList)
-//        recyclerView.adapter = adapter
         characterViewModel.makeCharacterFetch()
-        //  wData = args.wData
 
         binding.contentSearchView.clearFocus()
 
@@ -76,7 +73,6 @@ class CharacterListFragment : Fragment() {
         rvList.layoutManager = LinearLayoutManager(context)
         rvList.itemAnimator = DefaultItemAnimator()
 
-        //wData.list;
         cList = simpData.RelatedTopics
         cAdapter = CharacterAdapter(simpData.RelatedTopics) { item ->
 
@@ -119,7 +115,6 @@ class CharacterListFragment : Fragment() {
 
         }
 
-
     }
 
 
@@ -135,13 +130,8 @@ class CharacterListFragment : Fragment() {
                 simpData = cData
                 initViews();
 
-//                val directions =
-//                    CityLookupFragmentDirections.actionCityLookupFragmentToForecastFragment(wData)
-//                view?.findNavController()?.navigate(directions)
-
             }
         }
-
 
     }
 
@@ -168,6 +158,5 @@ class CharacterListFragment : Fragment() {
         }
 
     }
-
 
 }
